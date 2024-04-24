@@ -1,31 +1,46 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <ion-card class="custom-card">
+    <ion-card-header>
+      <ion-card-title>Crear Usuarios</ion-card-title>
+      <ion-card-subtitle>by: kevin Cuesta</ion-card-subtitle>
+    </ion-card-header>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <ion-card-content>
 
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-    </ion-content>
-  </ion-page>
+      <InputGeneric id="nombreInput" name="nambe" type="text" placeholder="Ingrese su nombre"/>
+      <InputGeneric id="fechaNacimientoInput" fechaNacimiento="date" type="date" placeholder="Seleccione su fecha de nacimiento"/>
+      <InputGeneric id="celularInput" celular="tel" type="tel" placeholder="Ingrese su número de celular"/>
+      <InputGeneric id="correoInput" correo="email" type="email" placeholder="Ingrese su correo electrónico"/>
+      Recuerda Rellenar todos los datos
+      <CheckboxGeneric checkboxText="Acepto los términos y condiciones" />
+    </ion-card-content>
+  </ion-card>
+  <ion-card-content class="custom-button">
+    <ButtonGeneric id="add" value="Agregar" fill="outline" />
+      <ButtonGeneric id="update" value="Modificar" fill="outline" color="success"/>
+      <ButtonGeneric id="delete" value="Elimnar" fill="outline" color="danger"/>
+      <ButtonGeneric id="search" value="Consultar" fill="outline" color="medium"/>
+  </ion-card-content>
+ 
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import {IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/vue';
+import InputGeneric from '@/components/InputGeneric.vue';
+import ButtonGeneric from '@/components/ButtonGeneric.vue';
+import CheckboxGeneric from '@/components/CheckboxGeneric.vue';
 </script>
 
 <style scoped>
+.custom-card {
+  background-color: #f0f0f0; /* Color de fondo gris */
+}
+.custom-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #container {
   text-align: center;
   
