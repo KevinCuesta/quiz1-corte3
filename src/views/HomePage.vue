@@ -7,12 +7,12 @@
 
     <ion-card-content>
 
-      <InputGeneric id="nombreInput" name="nambe" type="text" placeholder="Ingrese su nombre"/>
+      <InputGeneric id="nombreInput" name="name" type="text" placeholder="Ingrese su nombre"/>
       <InputGeneric id="fechaNacimientoInput" fechaNacimiento="date" type="date" placeholder="Seleccione su fecha de nacimiento"/>
       <InputGeneric id="celularInput" celular="tel" type="tel" placeholder="Ingrese su número de celular"/>
       <InputGeneric id="correoInput" correo="email" type="email" placeholder="Ingrese su correo electrónico"/>
       Recuerda Rellenar todos los datos
-      <CheckboxGeneric checkboxText="Acepto los términos y condiciones" />
+      <CheckboxGeneric id="terminos" value="Acepta Terminos y condiciones" color="danger"/>
     </ion-card-content>
   </ion-card>
   <ion-card-content class="custom-button">
